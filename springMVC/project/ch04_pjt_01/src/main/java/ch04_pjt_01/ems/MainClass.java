@@ -44,7 +44,7 @@ public class MainClass {
 		
 		// 학생 등록
 		registerService = ctx.getBean("studentRegisterService", StudentRegisterService.class);
-		registerService.register(new Student("hbs006","deer","p006","melissa",26,'w',"Music"));
+		registerService.register(new Student("hbs006","deer","p0006","melissa",26,'W',"Music"));
 		
 		printStudentInformationService.printStudentsInfo();		// 학생 리스트
 		

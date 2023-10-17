@@ -23,7 +23,7 @@ public class EMSInformationService {
 	private Map<String, DBConnectionInfo> dbInfos;
 
 	public void printEMSInformation() {
-		System.out.println("EMS INFORMATION START ----------");
+		System.out.println("EMS INFORMATION START -------");
 		String devPeriod = sYear + "/" + sMonth + "/" + sDay + " ~ " + eYear + "/" + eMonth + "/" + eDay;
 		System.out.println(info + "(" + devPeriod + ")");
 		System.out.println(copyRight);
@@ -31,7 +31,7 @@ public class EMSInformationService {
 		System.out.println("Developers: " + developers);
 		System.out.println("Administrator: " + administrators);
 		printDBInfo();
-		System.out.println("END --------------------");
+		System.out.println("END -------------------------");
 	}
 
 	private void printDBInfo() {
