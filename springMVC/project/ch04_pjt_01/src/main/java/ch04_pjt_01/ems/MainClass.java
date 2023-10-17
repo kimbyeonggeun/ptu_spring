@@ -16,7 +16,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		GenericXmlApplicationContext ctx = 
-				new GenericXmlApplicationContext("classpath:applicationContext.xml");
+				new GenericXmlApplicationContext("classpath:appCtxImport.xml");
 		
 		// 샘플 데이터
 		InitSampleData initSampleData = ctx.getBean("initSampleData",InitSampleData.class);
@@ -27,6 +27,7 @@ public class MainClass {
 		int[] sAges = initSampleData.getsAges();
 		char[] sGenders = initSampleData.getsGenders();
 		String[] sMajors = initSampleData.getsMajors();
+		
 		
 		// 데이터베이스에 샘플 데이터 등록
 		StudentRegisterService registerService = 
@@ -42,7 +43,7 @@ public class MainClass {
 		printStudentInformationService.printStudentsInfo();		// 학생 리스트
 		
 		// 학생 등록
-		registerService = ctx.getBean("StudentRegisterService", StudentRegisterService.class);
+		registerService = ctx.getBean("studentRegisterService", StudentRegisterService.class);
 		registerService.register(new Student("hbs006","deer","p006","melissa",26,'w',"Music"));
 		
 		printStudentInformationService.printStudentsInfo();		// 학생 리스트
@@ -52,7 +53,7 @@ public class MainClass {
 				ctx.getBean("studentSelectService", StudentSelectService.class);
 		Student selectedStudent = selectService.select("hbs006");
 		
-		System.out.println("STUDENT START -----");
+		System.out.println("STUDENT START ---------------");
 		System.out.print("sNum: "+selectedStudent.getsNum()+"\t");
 		System.out.print("sId: "+selectedStudent.getsId()+"\t");
 		System.out.print("sPw: "+selectedStudent.getsPw()+"\t");
@@ -60,12 +61,12 @@ public class MainClass {
 		System.out.print("sAge: "+selectedStudent.getsAge()+"\t");
 		System.out.print("sGender: "+selectedStudent.getsGender()+"\t");
 		System.out.println("sMajor: "+selectedStudent.getsMajor());
-		System.out.println("END --------------------");
+		System.out.println("END -------------------------");
 		
 		// 학생 수정
 		StudentModifyService modifyService = 
 				ctx.getBean("studentModifyService", StudentModifyService.class);
-		modifyService.modify(new Student("hbs006","pig","p0066","melissa",27,'w',"Computer"));
+		modifyService.modify(new Student("hbs006","pig","p0066","melissa",27,'W',"Computer"));
 		
 		printStudentInformationService.printStudentsInfo();		// 학생 리스트
 		
@@ -78,7 +79,7 @@ public class MainClass {
 		
 		// 시스템 정보
 		EMSInformationService emsInformationService = 
-				ctx.getBean("eMSInformationService", EMSInformationService.class);
+				ctx.getBean("eMsInformationService", EMSInformationService.class);
 		emsInformationService.printEMSInformation();
 		
 		ctx.close();

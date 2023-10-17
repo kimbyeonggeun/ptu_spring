@@ -18,7 +18,7 @@ public class PrintStudentInformationService {
 		Map<String, Student> allStudent = allSelectService.allSelect();
 		Set<String> keys = allStudent.keySet();
 		Iterator<String> iterator = keys.iterator();
-		System.out.println("STUDENT LIST STAET ----------");
+		System.out.println("STUDENT LIST START ----------");
 		
 		while(iterator.hasNext()) {
 			String key = iterator.next();
@@ -30,7 +30,9 @@ public class PrintStudentInformationService {
 			System.out.println("sAge : "+ student.getsAge() + "\t");
 			System.out.println("sGender : "+ student.getsGender() + "\t");
 			System.out.println("sMajor : "+ student.getsMajor() + "\t");
+			System.out.println();
 		}
-		System.out.println("END --------------------");
+		System.out.println("END -------------------------");
+		System.out.println();
 	}
 }
