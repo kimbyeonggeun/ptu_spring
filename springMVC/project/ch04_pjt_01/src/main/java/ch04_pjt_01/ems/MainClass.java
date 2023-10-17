@@ -54,13 +54,13 @@ public class MainClass {
 		Student selectedStudent = selectService.select("hbs006");
 		
 		System.out.println("STUDENT START ---------------");
-		System.out.print("sNum: "+selectedStudent.getsNum()+"\t");
-		System.out.print("sId: "+selectedStudent.getsId()+"\t");
-		System.out.print("sPw: "+selectedStudent.getsPw()+"\t");
-		System.out.print("sName: "+selectedStudent.getsName()+"\t");
-		System.out.print("sAge: "+selectedStudent.getsAge()+"\t");
-		System.out.print("sGender: "+selectedStudent.getsGender()+"\t");
-		System.out.println("sMajor: "+selectedStudent.getsMajor());
+		System.out.print("sNum : "+selectedStudent.getsNum()+"\t");
+		System.out.print("sId : "+selectedStudent.getsId()+"\t");
+		System.out.print("sPw : "+selectedStudent.getsPw()+"\t");
+		System.out.print("sName : "+selectedStudent.getsName()+"\t");
+		System.out.print("sAge : "+selectedStudent.getsAge()+"\t");
+		System.out.print("sGender : "+selectedStudent.getsGender()+"\t");
+		System.out.println("sMajor : "+selectedStudent.getsMajor());
 		System.out.println("END -------------------------");
 		
 		// 학생 수정
