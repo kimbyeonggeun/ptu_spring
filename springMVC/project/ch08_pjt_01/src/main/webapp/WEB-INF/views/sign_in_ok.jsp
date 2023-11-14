@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	This page is SIGN_UP.
+	This page is SIGN_IN_OK.
 
 </body>
 </html>
