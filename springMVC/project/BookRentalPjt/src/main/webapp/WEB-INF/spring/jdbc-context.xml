@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.rog/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sprngframework.org/schema/tx http://www.sprngframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- <context:property-placeholder location="/WDB-INF/spring/property/real.info.properties/> -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
+		<property name="url" value="jdbc:mariadb://127.0.0.1:3307/db_library"></property>
+	</bean>
+
+
+</beans>
