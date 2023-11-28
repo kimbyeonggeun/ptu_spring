@@ -24,7 +24,9 @@ public class AdminMemberService {
 			if(result > 0)
 				return ADMIN_ACCOUNT_CREATE_SUCCESS;
 			else
-				return ADMIN_ACCOUNT_ALREADY_EXIST;
+				return ADMIN_ACCOUNT_CREATE_FAIL;
+		} else {
+			return ADMIN_ACCOUNT_ALREADY_EXIST;
 		}
 
 	}
